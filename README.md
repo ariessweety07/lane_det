@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # LaneATT
@@ -164,3 +165,6 @@ If you use this code in your research, please cite:
   year      = {2021}
 }
 ```
+=======
+# lane_det
+>>>>>>> 00067d3f1b62ce01679a46847ab602d959b5ffc5
