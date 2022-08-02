@@ -10,11 +10,17 @@ from torch.utils.tensorboard import SummaryWriter
 
 class Experiment:
     def __init__(self, exp_name, args=None, mode='train', exps_basedir='experiments', tensorboard_dir='tensorboard'):
+        # 实验名称，要用哪个网络模型进行训练或测试
         self.name = exp_name
+        # 当前实验的文件夹
         self.exp_dirpath = os.path.join(exps_basedir, exp_name)
+        # 保存每个epoch模型的文件夹
         self.models_dirpath = os.path.join(self.exp_dirpath, 'models')
+        # 保存训练结果的文件夹
         self.results_dirpath = os.path.join(self.exp_dirpath, 'results')
+        # 参数文件
         self.cfg_path = os.path.join(self.exp_dirpath, 'config.yaml')
+        #
         self.code_state_path = os.path.join(self.exp_dirpath, 'code_state.txt')
         self.log_path = os.path.join(self.exp_dirpath, 'log_{}.txt'.format(mode))
         self.tensorboard_writer = SummaryWriter(os.path.join(tensorboard_dir, exp_name))
